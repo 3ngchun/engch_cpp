@@ -22,6 +22,7 @@ void Library::changeCmdTextColor(int colorChoice) {
 
 double Library::getRand(int range) {
     // return a random double from 0 to range
+    // https://stackoverflow.com/questions/39288595/why-not-just-use-random-device
     // https://stackoverflow.com/questions/12937963/get-local-time-in-nanoseconds
     auto start = std::chrono::high_resolution_clock::now();
     using namespace std;
