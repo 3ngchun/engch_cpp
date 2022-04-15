@@ -1,9 +1,3 @@
-#include <iostream>
-#include <Windows.h> // changeCmdTextColor
-#include <ctime>
-#include <random>
-#include <chrono>
-
 #include "Library.h"
 
 using namespace Engch;
@@ -22,13 +16,12 @@ void Library::changeCmdTextColor(int colorChoice) {
 
 double Library::getRand(int range) {
     // return a random double from 0 to range
-    // https://stackoverflow.com/questions/39288595/why-not-just-use-random-device
     // https://stackoverflow.com/questions/12937963/get-local-time-in-nanoseconds
     auto start = std::chrono::high_resolution_clock::now();
     using namespace std;
     random_device crypto_random_generator;
     auto finish = chrono::high_resolution_clock::now();
-    mt19937 actual_distribution(crypto_random_generator() * time(nullptr) *
+    mt19937 actual_distribution(crypto_random_generator() * time(nullptr) +
                                 chrono::duration_cast<chrono::nanoseconds>(finish - start).count());
     uniform_real_distribution<double> dist(0, range);
     return dist(actual_distribution);
@@ -45,10 +38,3 @@ bool Library::isDoneBefore() {
     // https://stackoverflow.com/questions/8412630/how-to-execute-a-piece-of-code-only-once
     return FIRST_TIME_HERE;
 }
-
-int main() {
-    std::string banner = "Welcome to Engch::library!";
-    return 0;
-}
-
-
