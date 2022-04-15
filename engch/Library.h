@@ -5,6 +5,12 @@
 #ifndef ENGCH_LIBRARY_H
 #define ENGCH_LIBRARY_H
 
+#include <iostream>
+#include <Windows.h> // changeCmdTextColor
+#include <ctime>
+#include <random>
+#include <chrono>
+
 namespace Engch {
     class Library {
     private:
