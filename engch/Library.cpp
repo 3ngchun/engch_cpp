@@ -14,7 +14,7 @@ void Library::changeCmdTextColor(int colorChoice) {
     SetConsoleTextAttribute(this->hConsole, colorChoice);
 }
 
-double Library::getRand(int range) {
+double Library::getRand(double range) {
     // return a random double from 0 to range
     // https://stackoverflow.com/questions/12937963/get-local-time-in-nanoseconds
     auto start = std::chrono::high_resolution_clock::now();
