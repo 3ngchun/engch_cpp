@@ -19,7 +19,7 @@ namespace Engch {
     public:
         void changeCmdTextColor(int);
 
-        double getRand(int);
+        double getRand(double);
 
         double getDoubleModulus(double, double);
 
