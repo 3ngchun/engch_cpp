@@ -1,12 +1,15 @@
 # engch_cpp
 methods that I edited/found useful and want to keep for easy reusing
-
 # How to use: 
+```
+#include "Library.h"
+using namespace Engch;
+Library ec;
+```
 ### void Library::changeCmdTextColor(int colorChoice) 
 highlight the next character with color in cmd, 7 is default color.
 ```
 // example 
-Engch::Library ec;
 printf("[");
 ec.changeCmdTextColor(hConsole, 10); 
 printf("%c", 'x'); // highlighted char
@@ -25,7 +28,6 @@ double modulus double, w/floating number point error. return x mod y in double.
 run only once. return true is not run before, false if run before. 
 ```
 // example --> no yes yes
-Engch::Library ec;
 std::string e = "no";
 printf("%s\n", e.c_str()); // no
 
