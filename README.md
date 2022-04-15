@@ -16,7 +16,7 @@ printf("%c", 'x'); // highlighted char
 ec.changeCmdTextColor(hConsole, 7); // reset color back to default
 printf("]");
 ```
-### double Library::getRand(int range)
+### double Library::getRand(double range)
 return a random double from 0 to range
 ```
 ```
