@@ -10,21 +10,44 @@
 #include <ctime>
 #include <random>
 #include <chrono>
+#include <string>
 
 namespace Engch {
+
     class Library {
     private:
+        /**
+         * #include "Library.h"\n
+         * int main() { Engch::Library ec; return 0; }
+         */
+        const std::string banner = "Welcome to Engch::library!";
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     protected:
     public:
-        void changeCmdTextColor(int);
+        /**
+         * highlight the next character onwards with colorChoice in cmd\n
+         * 7 is the default cmd color
+         */
+        void changeCmdTextColor(int colorChoice);
 
-        double getRand(double);
+        /**
+         * return a random double from 0 to range
+         */
+        double getRand(double range);
 
-        double getDoubleModulus(double, double);
+        /**
+         * return (value % toMod) w/floating number point error
+         */
+        double getDoubleModulus(double value, double toMod);
 
+        /**
+         * used in if condition to run only once\n
+         * return true is not run before\n
+         * return false if run before
+         */
         bool isDoneBefore();
     };
 }
+
 
 #endif //ENGCH_LIBRARY_H
