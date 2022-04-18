@@ -7,7 +7,8 @@ using namespace Engch;
 Library ec;
 ```
 ### void Library::changeCmdTextColor(int colorChoice) 
-highlight the next character with color in cmd, 7 is default color.
+highlight the next character onwards with colorChoice in cmd\
+7 is default color
 ```
 // example 
 printf("[");
@@ -21,11 +22,13 @@ return a random double from 0 to range
 ```
 ```
 ### double Library::getDoubleModulus(double x, double y)
-double modulus double, w/floating number point error. return x mod y in double.
+double modulus double, w/floating number point error\
+return x mod y in double.
 ```
 ```
 ### bool Library::isDoneBefore()
-run only once. return true is not run before, false if run before. 
+used in if condition to run only once\
+return true is not run before, false if run before
 ```
 // example --> no yes yes
 std::string e = "no";
